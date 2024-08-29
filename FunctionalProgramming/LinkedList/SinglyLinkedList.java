@@ -22,6 +22,9 @@ public class SinglyLinkedList implements LinkedList {
     @Override
     public void insertFirst(int data) {
         // TODO Auto-generated method stub
+        Node newNode = new Node(data);
+        newNode.next = head;
+        size++;
         throw new UnsupportedOperationException("Unimplemented method 'insertFirst'");
     }
 
