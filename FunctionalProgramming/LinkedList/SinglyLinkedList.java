@@ -13,4 +13,9 @@ public class SinglyLinkedList implements LinkedList {
         }
 
     }
+
+    public SinglyLinkedList() {
+        head = null;
+        size = 0;
+    }
 }
