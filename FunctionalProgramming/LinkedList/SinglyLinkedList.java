@@ -31,6 +31,17 @@ public class SinglyLinkedList implements LinkedList {
     @Override
     public void insertLast(int data) {
         // TODO Auto-generated method stub
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+        size++;
         throw new UnsupportedOperationException("Unimplemented method 'insertLast'");
     }
 
