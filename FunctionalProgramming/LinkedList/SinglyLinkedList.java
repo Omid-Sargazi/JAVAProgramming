@@ -48,6 +48,21 @@ public class SinglyLinkedList implements LinkedList {
     @Override
     public void insertAt(int index, int data) {
         // TODO Auto-generated method stub
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
+        }
+        if (index == 0) {
+            insertFirst(data);
+        } else {
+            Node newNode = new Node(data);
+            Node current = head;
+            for (int i = 0; i < index; i++) {
+                current = current.next;
+            }
+            newNode.next = current.next;
+            current.next = newNode;
+            size++;
+        }
         throw new UnsupportedOperationException("Unimplemented method 'insertAt'");
     }
 
