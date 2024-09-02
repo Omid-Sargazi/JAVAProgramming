@@ -69,7 +69,14 @@ public class SinglyLinkedList implements LinkedList {
     @Override
     public int deleteFirst() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteFirst'");
+        if (head == null) {
+            throw new RuntimeException("List is Empty;");
+        }
+        int data = head.data;
+        head = head.next;
+        size--;
+        return data;
+
     }
 
     @Override
