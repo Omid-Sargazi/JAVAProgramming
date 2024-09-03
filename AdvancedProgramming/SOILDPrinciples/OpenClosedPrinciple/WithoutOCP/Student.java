@@ -1,4 +1,4 @@
-package AdvancedProgramming.SOILDPrinciples.SingleResponsibility.WithSRP;
+package AdvancedProgramming.SOILDPrinciples.OpenClosedPrinciple.WithoutOCP;
 
 public class Student {
     String name;
