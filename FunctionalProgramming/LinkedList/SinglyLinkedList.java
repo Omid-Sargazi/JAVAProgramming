@@ -88,6 +88,7 @@ public class SinglyLinkedList implements LinkedList {
     @Override
     public int deleteAt(int index) {
         // TODO Auto-generated method stub
+
         throw new UnsupportedOperationException("Unimplemented method 'deleteAt'");
     }
 
