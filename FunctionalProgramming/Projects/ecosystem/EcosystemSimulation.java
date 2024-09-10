@@ -12,4 +12,26 @@ public class EcosystemSimulation {
     public static void main(String[] args) {
 
     }
+
+    private static void initializeRiver() {
+        int bearCount = 0;
+        int fishCount = 0;
+
+        while (bearCount < INITIAL_BEAR_COUNT) {
+            int position = random.nextInt(RIVER_SIZE);
+            if (river[position] == null) {
+                river[position] = new Bear();
+                bearCount++;
+            }
+        }
+
+        while (fishCount < INITIAL_FISH_COUNT) {
+            int position = random.nextInt(RIVER_SIZE);
+            if (river[position] == null) {
+                river[position] = new Fish();
+                fishCount++;
+            }
+        }
+
+    }
 }
