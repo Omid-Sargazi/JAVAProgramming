@@ -34,4 +34,27 @@ public class EcosystemSimulation {
         }
 
     }
+
+    private static void simulateTimeStep() {
+        if (river[i] != null) {
+            // Determine the new position
+            int newPosition = getRandomMove(i);
+            if (newPosition != i) {
+                if (river[newPosition] == null) {
+                    // Move the animal to the new position
+                    river[newPosition] = river[i];
+                    river[i] = null;
+                } else if (river[newPosition].getClass() == river[i].getClass()) {
+                    // Same type collision: Reproduction
+                    reproduceAnimal();
+                } else {
+                    // Different type collision: Bear eats Fish
+                    if (river[i] instanceof Bear && river[newPosition] instanceof Fish) {
+                        river[newPosition] = river[i];
+                        river[i] = null;
+                    }
+                }
+            }
+        }
+    }
 }
