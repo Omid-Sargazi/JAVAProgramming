@@ -57,4 +57,13 @@ public class EcosystemSimulation {
             }
         }
     }
+
+    private static int getRandomMove(int index) {
+        int move = random.nextInt(3) - 1; // -1 = left, 0 = stay, +1 = right
+        int newPosition = index + move;
+        if (newPosition < 0 || newPosition >= RIVER_SIZE) {
+            return index; // Out of bounds: stay in place
+        }
+        return newPosition;
+    }
 }
