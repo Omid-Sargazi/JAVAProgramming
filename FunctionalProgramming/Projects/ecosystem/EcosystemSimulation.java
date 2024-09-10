@@ -77,4 +77,15 @@ public class EcosystemSimulation {
         }
         return emptyCell;
     }
+
+    private static void reproduceAnimal() {
+        int emptyIndex = findEmptyCell();
+        if (emptyIndex != -1) {
+            if (random.nextBoolean()) {
+                river[emptyIndex] = new Bear();
+            } else {
+                river[emptyIndex] = new Fish();
+            }
+        }
+    }
 }
