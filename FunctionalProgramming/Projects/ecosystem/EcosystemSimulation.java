@@ -66,4 +66,15 @@ public class EcosystemSimulation {
         }
         return newPosition;
     }
+
+    private static int findEmptyCell() {
+        int emptyCell = -1;
+        for (int i = 0; i < RIVER_SIZE; i++) {
+            if (river[i] == null) {
+                emptyCell = i;
+                break;
+            }
+        }
+        return emptyCell;
+    }
 }
